@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Dropdown ddSlick Morgan Johnson</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://dl.dropboxusercontent.com/u/40036711/Scripts/jquery.ddslick.min.js"></script>
+        <script>
+
+    $( document ).ready(function() {
+ 
+           
+            $('#demo-html').ddslick({
+                onSelected: function (data) {
+                    console.log("Selected" + data.selectedIndex);
+                    
+                    if (data.selectedIndex == 0) {
+                        window.open("http://facebook.com");
+                    }
+                    
+                    if (data.selectedIndex == 1) {
+                        window.open("http://twitter.com/morgannjay");
+                    }
+                    
+                    if (data.selectedIndex == 2) {
+                        window.open("http://linkedin.com/morganleighj");
+                    }
+                    
+                    if (data.selectedIndex == 3) {
+                        window.open("http://foursquare.com");
+                    }
+                }
+            
+            });
+            
+            });
+        </script>
+    
+</head>
+
+<body>
+
+<h2>Morgan's DropDown Menu</h2>
+        
+        <select id="demo-html">
+        <option value="0" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/facebook-icon-32.png"
+            data-description="Morgan's Facebook">Facebook</option>
+        <option value="1" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+            data-description="Morgan's Twitter">Twitter</option>
+        <option value="2" selected="selected" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+            data-description="Morgan's LinkedIn">LinkedIn</option>
+        <option value="3" data-imagesrc="http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+            data-description="Morgan's Foursquare">Foursquare</option>
+    </select>
+
+</body>
+</html>
